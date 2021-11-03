@@ -1,5 +1,6 @@
 package model.players;
 
+import model.PlayerStatistics;
 import model.SoccerBall;
 
 import java.awt.*;
