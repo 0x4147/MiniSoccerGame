@@ -12,6 +12,7 @@ import java.awt.*;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import java.util.Iterator;
 
 public class GamePanel extends JPanel {
 
@@ -120,7 +121,7 @@ public class GamePanel extends JPanel {
 			g.setFont(uiFont);
 			g.drawString("Game Over!", 250, 250);
 			PlayerCollection gamePlayers = game.getGamePlayers();
-			gamePlayers.sort();
+//			gamePlayers.sort();
 			int y = 300;
 			for (GamePlayer player : gamePlayers) {
 				g.drawString(player.toString(), 200, y);
