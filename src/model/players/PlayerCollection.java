@@ -17,11 +17,11 @@ public class PlayerCollection implements Iterable<GamePlayer>{
 		playerList.add(player);
 	}
 	
-	public GamePlayer get(String playerName) {		
+	public GamePlayer get(String name) {		
 		for (GamePlayer player : playerList) {			
-			if(player.playerName.equals("striker")) {
+			if(player.playerName.equals(name)) {
 				return player;
-			}			
+			}
 		}
 		return null;
 	}
@@ -33,6 +33,10 @@ public class PlayerCollection implements Iterable<GamePlayer>{
 //			}			
 //		}
 //	}
+	
+	public int getSize() {
+		return playerList.size();
+	}
 	
 	@Override
 	public Iterator<GamePlayer> iterator() {

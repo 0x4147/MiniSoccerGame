@@ -14,7 +14,7 @@ public class PlayerCollectionIterator implements Iterator<GamePlayer>{
 	
 	@Override
 	public boolean hasNext() {
-		return playerListINTERNAL.get(index) != null;	
+		return playerListINTERNAL.size() != index;
 	}
 
 	@Override

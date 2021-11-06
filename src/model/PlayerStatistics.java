@@ -11,4 +11,9 @@ public class PlayerStatistics {
 	public void setStatistics(Integer n){
 		goals = n;
 	}
+	
+	@Override
+	public String toString() {
+		return Integer.toString(goals);
+	}
 }
