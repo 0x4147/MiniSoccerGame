@@ -14,28 +14,12 @@ class PlayerFactoryTest {
 	/**
 	 * Test whether a player is created by the player factory
 	 */
-	void testGetPlayer() {
-		GamePlayer player;
+	void isAPlayerCreated() {
+		GamePlayer player1;
+		GamePlayer player2;
 		PlayerFactory playerFactory = new PlayerFactory();
-		player = playerFactory.getPlayer("striker");
-		assertTrue(player.getPlayerName().compareTo("Striker") == 0);
-	}
-	
-	@Test
-	/**
-	 * Test whether the players are being added into the collection
-	 */
-	void testPlayerCollection() {
-		int nOfPlayers = 0;
-		int playersExpected = 2;
-		final PlayerCollection gamePlayers;
-		PlayerFactory playerFactory = new PlayerFactory();
-		gamePlayers = new PlayerCollection();
-		gamePlayers.add(playerFactory.getPlayer("striker"));
-		gamePlayers.add(playerFactory.getPlayer("goalkeeper"));
-		for(GamePlayer players : gamePlayers) {
-			nOfPlayers++;
-		}
-		assertEquals(playersExpected , nOfPlayers);
+		player1 = playerFactory.getPlayer("striker");
+		player2 = playerFactory.getPlayer("goalkeeper");
+		assertTrue((player1.getPlayerName().compareTo("Striker") == 0) && (player2.getPlayerName().compareTo("Goalkeeper") == 0));
 	}
 }

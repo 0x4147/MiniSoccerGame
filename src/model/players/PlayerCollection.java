@@ -34,10 +34,6 @@ public class PlayerCollection implements Iterable<GamePlayer>{
 //		}
 //	}
 	
-	public int getSize() {
-		return playerList.size();
-	}
-	
 	@Override
 	public Iterator<GamePlayer> iterator() {
 		return new PlayerCollectionIterator(playerList);
