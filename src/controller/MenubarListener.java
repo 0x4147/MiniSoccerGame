@@ -14,7 +14,6 @@ public class MenubarListener implements ActionListener {
 		gamePanel = panel;
 	}
 
-
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		SoccerGame soccerGame = gamePanel.getGame();
