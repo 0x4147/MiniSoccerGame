@@ -5,11 +5,15 @@ import java.util.Iterator;
 
 public class PlayerCollectionIterator implements Iterator<GamePlayer>{
 
-	ArrayList<GamePlayer> playerListINTERNAL = new ArrayList<GamePlayer>();
+	private ArrayList<GamePlayer> playerListINTERNAL;
 	int index = 0;
 	
 	public PlayerCollectionIterator(ArrayList<GamePlayer> playerList) {
-		playerListINTERNAL = playerList;	
+		this.playerListINTERNAL = new ArrayList<GamePlayer>();
+		for(GamePlayer player : playerList) {
+			this.playerListINTERNAL.add(player);
+		}
+		
 	}	
 	
 	@Override

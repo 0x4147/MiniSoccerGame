@@ -1,13 +1,16 @@
 package model.players;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
+
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
 
 import model.players.GamePlayer;
 
 public class PlayerCollection implements Iterable<GamePlayer>{
 	
-	ArrayList<GamePlayer> playerList;
+	private ArrayList<GamePlayer> playerList;
 	
 	public PlayerCollection() {
 		playerList = new ArrayList<GamePlayer>();
@@ -26,16 +29,13 @@ public class PlayerCollection implements Iterable<GamePlayer>{
 		return null;
 	}
 
-//	public void sort() {
-//		for (GamePlayer player : playerList) {			
-//			if(player.playerName.equals("striker")) {
-//				return player;
-//			}			
-//		}
-//	}
+	public void sort() {
+//		Collections.sort(playerList);
+	}
 	
 	@Override
 	public Iterator<GamePlayer> iterator() {
 		return new PlayerCollectionIterator(playerList);
 	}
 }
+

@@ -2,7 +2,7 @@ package model;
 
 public class PlayerStatistics {
 
-	Integer goals = 0;
+	private Integer goals = 0;
 	
 	public Integer getStatistics(){
 		return goals;
